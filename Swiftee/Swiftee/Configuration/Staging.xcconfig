@@ -1,0 +1,11 @@
+//
+//  PreRelease.xcconfig
+//  Swiftee
+//
+//  Created by Sainudheen K.A on 14/07/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BaseURL = Staging 
