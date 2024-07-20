@@ -21,15 +21,15 @@ jobs:
       run: xcodebuild -resolvePackageDependencies
 
     - name: Build and run tests
-      run: xcodebuild test -scheme YourScheme -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
+      run: xcodebuild test -scheme SwifteeDevw -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
 
     - name: Generate coverage report
       run: |
-        xcrun llvm-cov export -format=lcov -instr-profile ./DerivedData/Build/Products/Debug-iphonesimulator/codecov.profdata ./DerivedData/Build/Products/Debug-iphonesimulator/YOUR_APP.app/YOUR_APP > coverage_report.info
+        xcrun llvm-cov export -format=lcov -instr-profile ./DerivedData/Build/Products/Debug-iphonesimulator/codecov.profdata ./DerivedData/Build/Products/Debug-iphonesimulator/Swiftee.app/Swiftee > coverage_report.info
 
     - name: Verify test coverage
       run: |
-        COVERAGE=$(xcrun llvm-cov report -instr-profile ./DerivedData/Build/Products/Debug-iphonesimulator/codecov.profdata ./DerivedData/Build/Products/Debug-iphonesimulator/YOUR_APP.app/YOUR_APP | grep "TOTAL" | awk '{print $4}' | sed 's/%//')
+        COVERAGE=$(xcrun llvm-cov report -instr-profile ./DerivedData/Build/Products/Debug-iphonesimulator/codecov.profdata ./DerivedData/Build/Products/Debug-iphonesimulator/Swiftee.app/Swiftee | grep "TOTAL" | awk '{print $4}' | sed 's/%//')
         if (( $(echo "$COVERAGE < 75" | bc -l) )); then
           echo "Test coverage is below 75% ($COVERAGE%)"
           exit 1
@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: path/to/your/test-results
+        path: Swiftee/test-results
