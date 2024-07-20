@@ -1,0 +1,23 @@
+# Minimum version required by SwiftLint. More info: https://github.com/realm/SwiftLint
+swiftlint: 1.x
+
+# Enforce Swift style and conventions
+disabled_rules: []  # No rules disabled by default
+opt_in_rules: []    # No opt-in rules by default
+
+# Configuration for analyzers (optional)
+analyzer_rules:
+
+# Customize rules and severity levels here
+# Example:
+# type_body_length: warning (default: error)
+# line_length: warning (default: error)
+# todo_comment: (default: informative)
+
+
+# Paths to exclude during linting (optional)
+excluded:
+  # - Pods
+  # - Carthage
+  # - YourOtherExcludedFolder
+
