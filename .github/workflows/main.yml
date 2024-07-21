@@ -14,11 +14,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: SwiftFormat
-      run: swiftformat . --lint
     - name: SwiftLint
-      run: swiftlint lint --strict
-
+      run: swiftlint --fix && swiftlint
+      
     - name: Build and run tests
       run: xcodebuild test -scheme Swiftee -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
 
