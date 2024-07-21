@@ -17,11 +17,8 @@ jobs:
     - name: Install SwiftLint
       run: brew install swiftlint
 
-    - name: Run SwiftLint autocorrect
-      swiftlint autocorrect --path Swiftee/
-
     - name: Run SwiftLint
-      run: swiftlint --path Swiftee/
+      run: swiftlint
       
     - name: Build and run tests
       run: xcodebuild test -scheme Swiftee -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
