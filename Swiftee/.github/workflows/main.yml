@@ -14,8 +14,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: SwiftLint
-      run: swiftlint --fix && swiftlint
+    - name: Install SwiftLint
+      run: brew install swiftlint
+
+    - name: Run SwiftLint autocorrect
+      run: swiftlint autocorrect
+
+    - name: Run SwiftLint
+      run: swiftlint
       
     - name: Build and run tests
       run: xcodebuild test -scheme Swiftee -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
