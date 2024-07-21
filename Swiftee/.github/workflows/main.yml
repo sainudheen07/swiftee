@@ -21,7 +21,7 @@ jobs:
       run: swiftlint
       
     - name: Build and run tests
-      run: xcodebuild test -scheme Swiftee -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
+      run: xcodebuild test -scheme SwifteeDev -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
 
     - name: Generate coverage report
       run: |
