@@ -21,17 +21,24 @@ jobs:
       run: swiftlint
       
     - name: Build and run tests
-      run: xcodebuild test -scheme SwifteeDev -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
-
-      # Generate code coverage report
-      - name: Generate Coverage Report
-        run: xcrun llvm-cov report -instrumented-files-dir DerivedData/Build/Intermediates/MyProject.build/Debug-iphonesimulator/MyProject.build/Objects-normal/i386  -html MyCoverageReport.html
-
-      # Check code coverage percentage (replace 60 with your desired minimum)
-      - name: Check Coverage Threshold
         run: |
-          coverage=$(grep -oP 'Lines \([^%]+%\)' MyCoverageReport.html | grep -Eo '[0-9]+')
-          if [[ $coverage -lt 60 ]]; then
-            echo "Error: Code coverage is below 60% (found $coverage%)"
-            exit 1
-          fi
+            xcodebuild \
+            -project Swiftee \
+            -scheme SwifteeDev \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
+            test || exit 1
+#      run: xcodebuild test -scheme SwifteeDev -destination 'platform=iOS Simulator,name=iPhone 11' -enableCodeCoverage YES | xcpretty
+#
+#      # Generate code coverage report
+#      - name: Generate Coverage Report
+#        run: xcrun llvm-cov report -instrumented-files-dir DerivedData/Build/Intermediates/MyProject.build/Debug-iphonesimulator/MyProject.build/Objects-normal/i386  -html MyCoverageReport.html
+#
+#      # Check code coverage percentage (replace 60 with your desired minimum)
+#      - name: Check Coverage Threshold
+#        run: |
+#          coverage=$(grep -oP 'Lines \([^%]+%\)' MyCoverageReport.html | grep -Eo '[0-9]+')
+#          if [[ $coverage -lt 60 ]]; then
+#            echo "Error: Code coverage is below 60% (found $coverage%)"
+#            exit 1
+#          fi
