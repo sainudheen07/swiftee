@@ -14,6 +14,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
+    - name: List files for debugging
+      run: ls -la
+      
     - name: Install SwiftLint
       run: brew install swiftlint
 
@@ -23,7 +26,7 @@ jobs:
     - name: Build and run tests
       run: |
         xcodebuild \
-        -project Swiftee.xcodeproj \
+        -project ./Swiftee.xcodeproj \
         -scheme SwifteeDev \
         -sdk iphonesimulator \
         -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
