@@ -5,7 +5,8 @@ on:
     branches: [ develop ]
   pull_request:
     branches: [ develop ]
-
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: macos-latest
@@ -30,4 +31,5 @@ jobs:
         -scheme SwifteeDev \
         -sdk iphonesimulator \
         -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
+        CODE_SIGNING_ALLOWED=NO \
         test || exit 1
