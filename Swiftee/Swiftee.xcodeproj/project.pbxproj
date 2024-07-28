@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF42E8DA2C4C3EF800ECF23A /* main.yml in Resources */ = {isa = PBXBuildFile; fileRef = BF42E8D72C4C3EF800ECF23A /* main.yml */; };
 		BF6673D92C440C9C00EA6787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6673D82C440C9C00EA6787 /* AppDelegate.swift */; };
 		BF6673DB2C440C9C00EA6787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6673DA2C440C9C00EA6787 /* SceneDelegate.swift */; };
 		BF6673DD2C440C9C00EA6787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6673DC2C440C9C00EA6787 /* ViewController.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF42E8D72C4C3EF800ECF23A /* main.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = main.yml; sourceTree = "<group>"; };
 		BF6673D52C440C9C00EA6787 /* Swiftee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6673D82C440C9C00EA6787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6673DA2C440C9C00EA6787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,26 +46,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF42E8D82C4C3EF800ECF23A /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				BF42E8D72C4C3EF800ECF23A /* main.yml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
-		BF42E8D92C4C3EF800ECF23A /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				BF42E8D82C4C3EF800ECF23A /* workflows */,
-			);
-			path = .github;
-			sourceTree = "<group>";
-		};
 		BF6673CC2C440C9C00EA6787 = {
 			isa = PBXGroup;
 			children = (
-				BF42E8D92C4C3EF800ECF23A /* .github */,
 				BF6673D72C440C9C00EA6787 /* Swiftee */,
 				BF6673D62C440C9C00EA6787 /* Products */,
 			);
@@ -176,7 +157,6 @@
 				BFE017502C441D4F00653D87 /* Staging.xcconfig in Resources */,
 				BFE017512C441D5300653D87 /* Dev.xcconfig in Resources */,
 				BF6673E02C440C9C00EA6787 /* Base in Resources */,
-				BF42E8DA2C4C3EF800ECF23A /* main.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
