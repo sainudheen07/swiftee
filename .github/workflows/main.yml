@@ -1,35 +1,20 @@
-name: iOS CI
+
+name: Swift
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ develop ]
-  workflow_dispatch:
-  
+    branches: [ "develop" ]
+
 jobs:
   build:
+
     runs-on: macos-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: List files for debugging
-      run: ls -la
-      
-    - name: Install SwiftLint
-      run: brew install swiftlint
-
-    - name: Run SwiftLint
-      run: swiftlint
-      
-    - name: Build and run tests
-      run: |
-        xcodebuild \
-        -project Swiftee/Swiftee.xcodeproj \
-        -scheme SwifteeDev \
-        -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
-        CODE_SIGNING_ALLOWED=NO \
-        test || exit 1
+    - uses: actions/checkout@v4
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
