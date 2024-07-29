@@ -64,8 +64,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
 		BF42E8E02C4C412C00ECF23A /* SwifteeTests */ = {
 			isa = PBXGroup;
 			children = (
