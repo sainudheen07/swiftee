@@ -15,7 +15,6 @@
 		BF6673E22C440C9D00EA6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6673E12C440C9D00EA6787 /* Assets.xcassets */; };
 		BF6673E52C440C9D00EA6787 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BF6673E42C440C9D00EA6787 /* Base */; };
 		BF7385C02C48444300887B62 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BF7385BF2C48444300887B62 /* .swiftlint.yml */; };
-		BF9D83DF2C593BE6004D2B07 /* main.yml in Resources */ = {isa = PBXBuildFile; fileRef = BF9D83DC2C593BE6004D2B07 /* main.yml */; };
 		BFE017502C441D4F00653D87 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BFE0174F2C441D4900653D87 /* Staging.xcconfig */; };
 		BFE017512C441D5300653D87 /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BFE0174E2C441D3500653D87 /* Dev.xcconfig */; };
 		BFE0175E2C46E2D400653D87 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0175D2C46E2D400653D87 /* ConfigurationManager.swift */; };
@@ -43,7 +42,6 @@
 		BF6673E42C440C9D00EA6787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6673E62C440C9D00EA6787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7385BF2C48444300887B62 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		BF9D83DC2C593BE6004D2B07 /* main.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = main.yml; sourceTree = "<group>"; };
 		BFE0174E2C441D3500653D87 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		BFE0174F2C441D4900653D87 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		BFE017522C441D5E00653D87 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 		BF6673CC2C440C9C00EA6787 = {
 			isa = PBXGroup;
 			children = (
-				BF9D83DE2C593BE6004D2B07 /* .github */,
 				BF6673D72C440C9C00EA6787 /* Swiftee */,
 				BF42E8E02C4C412C00ECF23A /* SwifteeTests */,
 				BF6673D62C440C9C00EA6787 /* Products */,
@@ -107,22 +104,6 @@
 				BF7385BF2C48444300887B62 /* .swiftlint.yml */,
 			);
 			path = Swiftee;
-			sourceTree = "<group>";
-		};
-		BF9D83DD2C593BE6004D2B07 /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				BF9D83DC2C593BE6004D2B07 /* main.yml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
-		BF9D83DE2C593BE6004D2B07 /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				BF9D83DD2C593BE6004D2B07 /* workflows */,
-			);
-			path = .github;
 			sourceTree = "<group>";
 		};
 		BFE0174D2C441D0700653D87 /* Configuration */ = {
@@ -234,7 +215,6 @@
 				BFE017502C441D4F00653D87 /* Staging.xcconfig in Resources */,
 				BFE017512C441D5300653D87 /* Dev.xcconfig in Resources */,
 				BF6673E02C440C9C00EA6787 /* Base in Resources */,
-				BF9D83DF2C593BE6004D2B07 /* main.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

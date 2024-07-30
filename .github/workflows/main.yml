@@ -15,16 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Print current directory
-      run: pwd
-            
-    - name: Print current directory check
-      run: pwd
-
-    # List files to ensure Package.swift is present
-    - name: List files
-      run: ls -la
-      
     - name: Build
       run: swift build -v
       working-directory: ./Swiftee
