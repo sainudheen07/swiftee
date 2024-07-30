@@ -1,0 +1,29 @@
+name: Swift
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+  workflow_dispatch: 
+  
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Print current directory
+      run: pwd
+
+    # List files to ensure Package.swift is present
+    - name: List files
+      run: ls -la
+      
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
+
