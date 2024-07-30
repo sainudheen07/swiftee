@@ -24,6 +24,8 @@ jobs:
       
     - name: Build
       run: swift build -v
+      working-directory: /Users/runner/work/swiftee/swiftee/Swiftee
     - name: Run tests
       run: swift test -v
+      working-directory: /Users/runner/work/swiftee/swiftee/Swiftee
 
