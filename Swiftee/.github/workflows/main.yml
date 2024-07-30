@@ -17,6 +17,9 @@ jobs:
 
     - name: Print current directory
       run: pwd
+            
+    - name: Print current directory check
+      run: pwd
 
     # List files to ensure Package.swift is present
     - name: List files
