@@ -21,4 +21,3 @@ jobs:
     - name: Run tests
       run: swift test -v
       working-directory: ./Swiftee
-
